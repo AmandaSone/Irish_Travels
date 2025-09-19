@@ -1,82 +1,78 @@
 body {
-    font-family: sans-serif;         
+    font-family: sans-serif;          
     margin: 0;                       
-    line-height: 1.6;                
-    background-color: #ecd6ca;      
-    color: #333;                    
-    font-size: 14px;                 
+    background-color: #efe1d5;      
+    color: #333;                   
+    font-size: 14px;                
 }
 
 body {
   font-family: Arial, sans-serif; 
-  background-color: #ecd6ca; 
+  background-color: #efe1d5; 
 }
 
 /* --------------- */
+
 
 @media screen and (max-width: 600px) {
   body {
-    background-color: #ecd6ca; 
+    background-color: #efe1d5; 
   }
   .container {
-    width: 95%; /* Gir en "container"-div en bredde på 95% av skjermen, med litt luft på sidene. */
+    width: 95%; 
   }
   h1 {
-    font-size: 1.5em; /* Reduserer fontstørrelsen for h1-overskriften for bedre lesbarhet på små skjermer. */
+    font-size: 1.5em; 
   }
 }
 
-/* --------------- */
+/* ----------------- */
 
 @media screen and (min-width: 1200px) {
   body {
-    background-color: #ecd6ca; 
+    background-color: #efe1d5; 
   }
   .container {
     width: 1100px; 
   }
   h1 {
-    font-size: 3em; /* Øker fontstørrelsen for h1-overskriften for å fylle ut mer av plassen på store skjermer. */
+    font-size: 3em; 
   }
 }
 
-/* ----------------------------------------------------------------------- */
-
-/* Definerer containeren som skal bruke grid-layout */
 .grid-container {
-    display: grid;                   /* Dette er kjerneegenskapen: den gjør elementet til en grid-beholder */
-    /* Definerer kolonnene i grid'en.
-       '3fr' betyr at den første kolonnen tar 3 "brøkdeler" av plassen.
-       '1fr' betyr at den andre kolonnen tar 1 "brøkdel" av plassen.
-       Totalt er det 4 brøkdeler (3+1), så kolonnene blir 75% og 25% brede. */
+    display: grid;                   
     grid-template-columns: 3fr 1fr;
-    gap: 20px;                       /* Legger til 20px mellomrom mellom grid-elementene (horisontalt og vertikalt) */
-    padding: 20px;                   /* Legger til 20px innvendig polstring rundt innholdet */
-    max-width: 2000px;               /* Sørger for at containeren ikke blir for bred på store skjermer */
-    margin: 20px auto;               /* Sentrerer containeren horisontalt på siden */
-    background-color: #fff;          /* Setter en hvit bakgrunnsfarge for innholdet */
-    border-radius: 8px;              /* Avrunder hjørnene på containeren */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Legger til en myk skygge for visuell dybde */
+    gap: 20px;                       
+    padding: 20px;                   
+    max-width: 2000px;               
+    margin: 80px auto;               
+    background-color: #da8686;          
+    border-radius: 8px;              
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-style: dashed;
 }
 
-/* Stiler for hovedinnhold og sidepanel, som er "items" i grid'en */
-.hovedinnhold, .sidepanel {
-    background-color: #f9f9f9;       /* Setter en lys bakgrunnsfarge for innholdselementene */
-    padding: 20px;                   /* Legger til polstring inne i hvert element */
-    border-radius: 6px;              /* Avrunder hjørnene på innholdselementene */
+
+.main-content, .sidebar {
+    background-color: #f9f9f9;       
+    padding: 20px;                  
+    border-radius: 6px;  
+    border-style: dotted;            
 }
 
-/* Generelle stiler for header og footer */
+
 header, footer {
-    text-align: center;              /* Sentrerer teksten i både header og footer */
-    padding: 10px;                   /* Legger til litt polstring */
+    text-align: justify;              /* Sentrerer teksten i både header og footer */
+    padding: 5px;                   /* Legger til litt polstring */
     background-color: #333;          /* Setter en mørk bakgrunn */
     color: white;                    /* Sørger for at teksten er hvit */
 }
 
+
 /* Styler navigasjonsmenyen */
 nav ul {
-    list-style: none;                /* Fjerner standard punkter fra listen */
+    list-style-position:justify;               /* Fjerner standard punkter fra listen */
     padding: 0;                      /* Fjerner standard polstring fra listen */
     display: flex;                   /* Bruker Flexbox for å plassere listeelementene på en rad */
     justify-content: center;         /* Sentrerer listeelementene horisontalt */
