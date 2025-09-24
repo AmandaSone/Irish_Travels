@@ -55,12 +55,12 @@ body {
 
 
 .main-content, .sidebar {
-    background-color: #f9f9f9;       
+    background-color: #f9baba;       
     padding: 20px;                  
     border-radius: 6px;  
     border-style: dotted;            
 }
-
+  
 
 header, footer {
     text-align: justify;              /* Sentrerer teksten i både header og footer */
@@ -70,9 +70,20 @@ header, footer {
 }
 
 
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
 /* Styler navigasjonsmenyen */
 nav ul {
-    list-style-position:justify;               /* Fjerner standard punkter fra listen */
+    list-style: none;                /* Fjerner standard punkter fra listen */
     padding: 0;                      /* Fjerner standard polstring fra listen */
     display: flex;                   /* Bruker Flexbox for å plassere listeelementene på en rad */
     justify-content: center;         /* Sentrerer listeelementene horisontalt */
