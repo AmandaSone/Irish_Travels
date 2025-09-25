@@ -1,3 +1,40 @@
+/* Header Flexbox Layout */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #333;
+  box-shadow: 0 2px 8px #812c2c;
+}
+
+.header-flex h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button-link {
+  background: #e0bfae;
+  color: #333;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.button-link:hover {
+  background: #d1a98c;
+}
+
+/* --------------- */
+
 body {
     font-family: sans-serif;          
     margin: 0;                       
@@ -67,18 +104,6 @@ header, footer {
     padding: 5px;                   /* Legger til litt polstring */
     background-color: #333;          /* Setter en mørk bakgrunn */
     color: white;                    /* Sørger for at teksten er hvit */
-}
-
-
-.button {
-  background-color: #04AA6D;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
 }
 
 /* Styler navigasjonsmenyen */
