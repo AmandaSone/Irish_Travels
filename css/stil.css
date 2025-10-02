@@ -4,8 +4,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background: #333;
-  box-shadow: 0 2px 8px #812c2c;
+  background: #364529;
+  /* box-shadow: 0 2px 8px #812c2c; */
 }
 
 .header-flex h1 {
@@ -22,15 +22,15 @@
 }
 
 .button-link {
-  background: #e0bfae;
+  background: #60794C;
   color: #333;
-  padding: 0.5em 1em;
+  padding: 0.8em 1.5em;
   border-radius: 4px;
   text-decoration: none;
   transition: background 0.2s;
 }
 .button-link:hover {
-  background: #d1a98c;
+  background: #84a06d;
 }
 
 /* --------------- */
@@ -38,14 +38,14 @@
 body {
     font-family: sans-serif;          
     margin: 0;                       
-    background-color: #efe1d5;      
+    background-color: #FCE6D4;      
     color: #333;                   
     font-size: 14px;                
 }
 
 body {
   font-family: Arial, sans-serif; 
-  background-color: #efe1d5; 
+  background-color: #FCE6D4; 
 }
 
 /* --------------- */
@@ -53,7 +53,7 @@ body {
 
 @media screen and (max-width: 600px) {
   body {
-    background-color: #efe1d5; 
+    background-color: #FCE6D4; 
   }
   .container {
     width: 95%; 
@@ -67,7 +67,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   body {
-    background-color: #efe1d5; 
+    background-color: #FCE6D4; 
   }
   .container {
     width: 1100px; 
@@ -102,7 +102,7 @@ body {
 header, footer {
     text-align: justify;              /* Sentrerer teksten i både header og footer */
     padding: 5px;                   /* Legger til litt polstring */
-    background-color: #333;          /* Setter en mørk bakgrunn */
+    background-color: #364529;          /* Setter en mørk bakgrunn */
     color: white;                    /* Sørger for at teksten er hvit */
 }
 
