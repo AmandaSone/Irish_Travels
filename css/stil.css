@@ -1,122 +1,139 @@
 /* Header Flexbox Layout */
-.header-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background: #364529;
-  /* box-shadow: 0 2px 8px #812c2c; */
+.header-flex {                           /* Flex container for header */
+  display: flex;                        /* Aktiverer flexbox */
+  align-items: center;                  /* Vertikal sentrering av innhold */
+  justify-content: space-between;       /* Plasserer elementer med plass mellom */
+  padding: 1rem 2rem;                   /* Indre marg rundt header */
+  background: #364529;                  /* Bakgrunnsfarge på header */
+  /* box-shadow: 0 2px 8px #812c2c; */  /* Skygge (kommentert ut) */
 }
 
-.header-flex h1 {
-  margin: 0;
-  font-size: 2em;
+.header-flex h1 {                       /* Tittel i header */
+  margin: 0;                            /* Fjerner standard marg */
+  font-size: 2em;                       /* Størrelse på tittel */
 }
 
-.header-buttons {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.header-buttons {                       /* Container for header-knapper */
+  display: flex;                        /* Flexbox for knapper */
+  gap: 1rem;                            /* Avstand mellom knapper */
+  list-style: none;                     /* Fjerner punktmerking */
+  margin: 0;                            /* Fjerner marg */
+  padding: 0;                           /* Fjerner padding */
 }
 
-.button-link {
-  background: #60794C;
-  color: #333;
-  padding: 0.8em 1.5em;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background 0.2s;
+.button-link {                          /* Stil for knapp-lenker */
+  background: #60794C;                  /* Bakgrunnsfarge på knapp */
+  color: #333;                          /* Tekstfarge */
+  padding: 0.8em 1.5em;                 /* Indre marg på knapp */
+  border-radius: 4px;                   /* Runde hjørner */
+  text-decoration: none;                /* Fjerner understrek */
+  transition: background 0.2s;          /* Animasjon ved hover */
 }
-.button-link:hover {
-  background: #84a06d;
+.button-link:hover {                    /* Hover-effekt på knapp */
+  background: #84a06d;                  /* Lysere bakgrunn ved hover */
 }
 
 /* --------------- */
 
 body {
-    font-family: sans-serif;          
-    margin: 0;                       
-    background-color: #FCE6D4;      
-    color: #333;                   
-    font-size: 14px;                
+    font-family: sans-serif;            /* Skrifttype for hele siden */
+    margin: 0;                         /* Fjerner standard marg */
+    background-color: #FCE6D4;          /* Bakgrunnsfarge */
+    color: #333;                        /* Tekstfarge */
+    font-size: 14px;                    /* Standard tekststørrelse */
 }
 
-body {
-  font-family: Arial, sans-serif; 
-  background-color: #FCE6D4; 
-}
 
 /* --------------- */
 
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {  /* Responsivt design for små skjermer */
   body {
-    background-color: #FCE6D4; 
+    background-color: #FCE6D4;          /* Bakgrunnsfarge */
   }
   .container {
-    width: 95%; 
+    width: 95%;                         /* Container bredde på små skjermer */
   }
   h1 {
-    font-size: 1.5em; 
+    font-size: 1.5em;                   /* Mindre tittel på små skjermer */
+  }
+}
+
+@media screen and (max-width: 900px) {      /* Når skjermen er liten */
+  .wrapper {
+    flex-direction: column;                 /* Legg grid-containerne under hverandre */
+    gap: 20px;                              /* Mindre avstand mellom */
+    align-items: center;                    /* Sentrer innholdet */
+  }
+  .grid-container {
+    max-width: 100%;                        /* Full bredde på små skjermer */
   }
 }
 
 /* ----------------- */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) { /* Responsivt design for store skjermer */
   body {
-    background-color: #FCE6D4; 
+    background-color: #FCE6D4;          /* Bakgrunnsfarge */
   }
   .container {
-    width: 1100px; 
+    width: 1100px;                      /* Container bredde på store skjermer */
   }
   h1 {
-    font-size: 3em; 
+    font-size: 3em;                     /* Større tittel på store skjermer */
   }
 }
 
-.grid-container {
-    display: grid;                   
-    grid-template-columns: 3fr 1fr;
-    gap: 20px;                       
-    padding: 20px;                   
-    max-width: 2000px;               
-    margin: 80px auto;               
-    background-color: #da8686;          
-    border-radius: 8px;              
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    border-style: dashed;
+.wrapper {                               /* Ny wrapper for grid-containere */
+  display: flex;                         /* Plasserer grid-containere side ved side */
+  gap: 40px;                             /* Avstand mellom grid-containere */
+  justify-content: center;               /* Sentrerer innholdet horisontalt */
+  margin: 40px;                        /* Topp og bunn marg */
 }
 
+.grid-container {                        /* Hoved grid container */
+    flex: 1;                             /* Lar grid-container vokse likt i wrapper */
+    display: grid;                       /* Aktiverer CSS grid */
+    grid-template-columns: 1fr 1fr;      /* To kolonner med lik bredde */
+    gap: 40px;                           /* Avstand mellom kolonner */
+    padding: 20px;                       /* Indre marg for tekst */
+    max-width: 600px;                    /* Maks bredde på hver grid-container */
+    background-color: #da8686;           /* Bakgrunnsfarge på grid */
+    border-radius: 8px;                  /* Runde hjørner */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skyggeeffekt */
+    border-style: dashed;                /* Prikkete kantlinje */
+    margin: 40px;                           /* Fjerner ytre marg */
+}
 
-.main-content, .sidebar {
-    background-color: #f9baba;       
-    padding: 20px;                  
-    border-radius: 6px;  
-    border-style: dotted;            
+.main-content, .sidebar {               /* Hovedinnhold og sidebar */
+    background-color: #f9baba;          /* Bakgrunnsfarge */
+    padding: 20px;                      /* Indre marg for teks*/
+    border-radius: 6px;                 /* Runde hjørner */
+    border-style: dotted;               /* Prikkete kantlinje */
 }
   
-
 header, footer {
-    text-align: justify;              /* Sentrerer teksten i både header og footer */
-    padding: 5px;                   /* Legger til litt polstring */
-    background-color: #364529;          /* Setter en mørk bakgrunn */
-    color: white;                    /* Sørger for at teksten er hvit */
+    text-align: justify;                /* Justerer tekst */
+    padding: 5px;                       /* Indre marg */
+    background-color: #364529;          /* Bakgrunnsfarge */
+    color: white;                       /* Tekstfarge */
 }
 
 /* Styler navigasjonsmenyen */
 nav ul {
-    list-style: none;                /* Fjerner standard punkter fra listen */
-    padding: 0;                      /* Fjerner standard polstring fra listen */
-    display: flex;                   /* Bruker Flexbox for å plassere listeelementene på en rad */
-    justify-content: center;         /* Sentrerer listeelementene horisontalt */
-    gap: 20px;                       /* Legger til 20px mellomrom mellom hvert listeelement */
+    list-style: none;                   /* Fjerner punkter fra liste */
+    padding: 0;                         /* Fjerner padding */
+    display: flex;                      /* Flexbox for meny */
+    justify-content: center;            /* Sentrerer menyen */
+    gap: 20px;                          /* Avstand mellom elementer */
 }
 
 /* Styler lenkene i navigasjonsmenyen */
 nav a {
-    color: white;                    /* Setter lenkefargen til hvit */
-    text-decoration: none;           /* Fjerner understreken fra lenkene */
+    color: white;                       /* Hvit tekst på lenker */
+    text-decoration: none;              /* Fjerner understrek */
+}
+
+.container {
+  display: grid;                        /* Aktiverer grid */
+  column-gap: 50px;                     /* Avstand mellom kolonner */
 }
