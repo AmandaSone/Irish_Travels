@@ -156,3 +156,38 @@ header, footer {
   display: grid;                        /* Aktiverer grid */
   column-gap: 50px;                     /* Avstand mellom kolonner */
 }
+
+/* ===========================
+   GALLERI STIL
+   =========================== */
+
+/* Flexbox for galleriet */
+.gallery {                               /* Container for galleri */
+  display: flex;                        /* Bruker flexbox for layout */
+  flex-wrap: wrap;                      /* Bryter til ny linje ved behov */
+  justify-content: flex-start;          /* Starter innholdet til venstre */
+}
+
+/* Stil for hvert galleri-element */
+.gallery-item {                         /* Enkelt bilde/element i galleriet */
+  margin: 5px;                          /* Avstand rundt elementet */
+  border: 1px solid #ccc;               /* Lys grå kant */
+  width: 180px;                         /* Fast bredde på elementet */
+  transition: border 0.2s;              /* Myk overgang på kant ved hover */
+}
+
+.gallery-item:hover {                   /* Hover-effekt på galleri-element */
+  border: 1px solid #777;               /* Mørkere kant ved hover */
+}
+
+/* Stil for bilde i galleri-element */
+.gallery-item img {                     
+  width: 100%;                          /* Bildet fyller hele bredden */
+  height: auto;                         /* Beholder proporsjoner */
+}
+
+/* Stil for beskrivelse under bilde */
+.gallery-item .desc {                   
+  padding: 15px;                        /* Indre marg rundt tekst */
+  text-align: center;                   /* Sentrerer teksten */
+}
