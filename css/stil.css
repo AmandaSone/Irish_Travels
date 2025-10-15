@@ -38,8 +38,7 @@
 body {
     font-family: sans-serif;            /* Skrifttype for hele siden */
     margin: 0;                         /* Fjerner standard marg */
-    background-color: #FCE6D4;          /* Bakgrunnsfarge */
-    color: #333;                        /* Tekstfarge */
+    background-color: #f7c79f;          /* Bakgrunnsfarge */
     font-size: 14px;                    /* Standard tekststørrelse */
 }
 
@@ -56,9 +55,6 @@ body {
   h1 {
     font-size: 1.5em;                   /* Mindre tittel på små skjermer */
   }
-}
-
-@media screen and (max-width: 900px) {      /* Når skjermen er liten */
   .wrapper {
     flex-direction: column;                 /* Legg grid-containerne under hverandre */
     gap: 20px;                              /* Mindre avstand mellom */
@@ -66,6 +62,18 @@ body {
   }
   .grid-container {
     max-width: 100%;                        /* Full bredde på små skjermer */
+  }
+}
+
+@media screen and (max-width: 900px) {      /* Når skjermen er liten */
+  body {
+    background-color: #FCE6D4;          /* Bakgrunnsfarge */
+  }
+  .container {
+    width: 95%;                         /* Container bredde på små skjermer */
+  }
+  h1 {
+    font-size: 1.5em;                   /* Mindre tittel på små skjermer */
   }
 }
 
@@ -85,18 +93,18 @@ body {
 
 .wrapper {                               /* Ny wrapper for grid-containere */
   display: flex;                         /* Plasserer grid-containere side ved side */
-  gap: 40px;                             /* Avstand mellom grid-containere */
+  gap: 5px;                             /* Avstand mellom grid-containere */
   justify-content: center;               /* Sentrerer innholdet horisontalt */
-  margin: 40px;                        /* Topp og bunn marg */
+  margin: 20px;                        /* Topp og bunn marg */
 }
 
 .grid-container {                        /* Hoved grid container */
     flex: 1;                             /* Lar grid-container vokse likt i wrapper */
     display: grid;                       /* Aktiverer CSS grid */
     grid-template-columns: 1fr 1fr;      /* To kolonner med lik bredde */
-    gap: 40px;                           /* Avstand mellom kolonner */
-    padding: 20px;                       /* Indre marg for tekst */
-    max-width: 600px;                    /* Maks bredde på hver grid-container */
+    gap: 20px;                           /* Avstand mellom kolonner */
+    padding: 10px;                       /* Indre marg for tekst */
+    max-width: 700px;                    /* Maks bredde på hver grid-container */
     background-color: #da8686;           /* Bakgrunnsfarge på grid */
     border-radius: 8px;                  /* Runde hjørner */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skyggeeffekt */
