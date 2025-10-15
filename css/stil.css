@@ -1,4 +1,8 @@
-/* Header Flexbox Layout */
+/* ===========================
+   HEADER OG NAVIGASJON
+   =========================== */
+
+/* Flexbox for headeren */
 .header-flex {                           /* Flex container for header */
   display: flex;                        /* Aktiverer flexbox */
   align-items: center;                  /* Vertikal sentrering av innhold */
@@ -8,12 +12,14 @@
   /* box-shadow: 0 2px 8px #812c2c; */  /* Skygge (kommentert ut) */
 }
 
-.header-flex h1 {                       /* Tittel i header */
+/* Tittel i headeren */
+.header-flex h1 {                       
   margin: 0;                            /* Fjerner standard marg */
   font-size: 2em;                       /* Størrelse på tittel */
 }
 
-.header-buttons {                       /* Container for header-knapper */
+/* Navigasjonsmeny-knapper */
+.header-buttons {                       
   display: flex;                        /* Flexbox for knapper */
   gap: 1rem;                            /* Avstand mellom knapper */
   list-style: none;                     /* Fjerner punktmerking */
@@ -21,68 +27,118 @@
   padding: 0;                           /* Fjerner padding */
 }
 
-.button-link {                          /* Stil for knapp-lenker */
+/* Stil for knapp-lenker */
+.button-link {                          
   background: #60794C;                  /* Bakgrunnsfarge på knapp */
-  color: #333;                          /* Tekstfarge */
+  color: #ffffff;                       /* Tekstfarge */
   padding: 0.8em 1.5em;                 /* Indre marg på knapp */
   border-radius: 4px;                   /* Runde hjørner */
   text-decoration: none;                /* Fjerner understrek */
   transition: background 0.2s;          /* Animasjon ved hover */
 }
-.button-link:hover {                    /* Hover-effekt på knapp */
+.button-link:hover {                    
   background: #84a06d;                  /* Lysere bakgrunn ved hover */
 }
 
-/* --------------- */
+/* Navigasjonsmeny layout */
+nav ul {                                
+  list-style: none;                     /* Fjerner punkter fra liste */
+  padding: 0;                           /* Fjerner padding */
+  display: flex;                        /* Flexbox for meny */
+  justify-content: center;              /* Sentrerer menyen */
+  gap: 20px;                            /* Avstand mellom elementer */
+}
+
+/* Navigasjonslenker */
+nav a {                                
+  color: white;                         /* Hvit tekst på lenker */
+  text-decoration: none;                /* Fjerner understrek */
+}
+
+/* ===========================
+   BODY OG GRUNNLEGGENDE STIL
+   =========================== */
 
 body {
-    font-family: sans-serif;            /* Skrifttype for hele siden */
-    margin: 0;                         /* Fjerner standard marg */
-    background-color: #f7c79f;          /* Bakgrunnsfarge */
-    font-size: 14px;                    /* Standard tekststørrelse */
+  font-family: sans-serif;              /* Skrifttype for hele siden */
+  margin: 0;                            /* Fjerner standard marg */
+  background-color: #FCE6D4;            /* Bakgrunnsfarge */
+  font-size: 14px;                      /* Standard tekststørrelse */
 }
 
+/* ===========================
+   GRID OG WRAPPER
+   =========================== */
 
-/* --------------- */
+/* Wrapper for grid-containere */
+.wrapper {                              
+  display: flex;                        /* Plasserer grid-containere side ved side */
+  gap: 5px;                             /* Avstand mellom grid-containere */
+  justify-content: center;              /* Sentrerer innholdet horisontalt */
+  margin: 20px;                         /* Topp og bunn marg */
+}
 
-@media screen and (max-width: 600px) {  /* Responsivt design for små skjermer */
-  body {
-    background-color: #FCE6D4;          /* Bakgrunnsfarge */
-  }
+/* Grid-container for innhold */
+.grid-container {                       
+  flex: 1;                              /* Lar grid-container vokse likt i wrapper */
+  display: grid;                        /* Aktiverer CSS grid */
+  grid-template-columns: 1fr 1fr;       /* To kolonner med lik bredde */
+  gap: 20px;                            /* Avstand mellom kolonner */
+  padding: 10px;                        /* Indre marg for tekst */
+  max-width: 700px;                     /* Maks bredde på hver grid-container */
+  background-color: #da8686;            /* Bakgrunnsfarge på grid */
+  border-radius: 8px;                   /* Runde hjørner */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skyggeeffekt */
+  border-style: dashed;                 /* Prikkete kantlinje */
+  margin: 40px;                         /* Ytre marg */
+}
+
+/* ===========================
+   INNHOLD OG SIDEBAR
+   =========================== */
+
+.main-content, .sidebar {               
+  background-color: #f9baba;            /* Bakgrunnsfarge */
+  padding: 20px;                        /* Indre marg for tekst */
+  border-radius: 6px;                   /* Runde hjørner */
+  border-style: dotted;                 /* Prikkete kantlinje */
+}
+
+/* ===========================
+   HEADER OG FOOTER
+   =========================== */
+
+header, footer {
+  text-align: justify;                  /* Justerer tekst */
+  padding: 5px;                         /* Indre marg */
+  background-color: #364529;            /* Bakgrunnsfarge */
+  color: white;                         /* Tekstfarge */
+}
+
+/* ===========================
+   RESPONSIVT DESIGN
+   =========================== */
+
+/* For små og mellomstore skjermer */
+@media screen and (max-width: 900px) {      
   .container {
-    width: 95%;                         /* Container bredde på små skjermer */
+    width: 95%;                         /* Container bredde på små/mellomstore skjermer */
   }
   h1 {
-    font-size: 1.5em;                   /* Mindre tittel på små skjermer */
+    font-size: 1.5em;                   /* Mindre tittel på små/mellomstore skjermer */
   }
   .wrapper {
-    flex-direction: column;                 /* Legg grid-containerne under hverandre */
-    gap: 20px;                              /* Mindre avstand mellom */
-    align-items: center;                    /* Sentrer innholdet */
+    flex-direction: column;             /* Legg grid-containerne under hverandre */
+    gap: 20px;                          /* Mindre avstand mellom */
+    align-items: center;                /* Sentrer innholdet */
   }
   .grid-container {
-    max-width: 100%;                        /* Full bredde på små skjermer */
+    max-width: 100%;                    /* Full bredde på små/mellomstore skjermer */
   }
 }
 
-@media screen and (max-width: 900px) {      /* Når skjermen er liten */
-  body {
-    background-color: #FCE6D4;          /* Bakgrunnsfarge */
-  }
-  .container {
-    width: 95%;                         /* Container bredde på små skjermer */
-  }
-  h1 {
-    font-size: 1.5em;                   /* Mindre tittel på små skjermer */
-  }
-}
-
-/* ----------------- */
-
-@media screen and (min-width: 1200px) { /* Responsivt design for store skjermer */
-  body {
-    background-color: #FCE6D4;          /* Bakgrunnsfarge */
-  }
+/* For store skjermer */
+@media screen and (min-width: 1200px) { 
   .container {
     width: 1100px;                      /* Container bredde på store skjermer */
   }
@@ -91,56 +147,11 @@ body {
   }
 }
 
-.wrapper {                               /* Ny wrapper for grid-containere */
-  display: flex;                         /* Plasserer grid-containere side ved side */
-  gap: 5px;                             /* Avstand mellom grid-containere */
-  justify-content: center;               /* Sentrerer innholdet horisontalt */
-  margin: 20px;                        /* Topp og bunn marg */
-}
+/* ===========================
+   EKSTRA GRID STIL
+   =========================== */
 
-.grid-container {                        /* Hoved grid container */
-    flex: 1;                             /* Lar grid-container vokse likt i wrapper */
-    display: grid;                       /* Aktiverer CSS grid */
-    grid-template-columns: 1fr 1fr;      /* To kolonner med lik bredde */
-    gap: 20px;                           /* Avstand mellom kolonner */
-    padding: 10px;                       /* Indre marg for tekst */
-    max-width: 700px;                    /* Maks bredde på hver grid-container */
-    background-color: #da8686;           /* Bakgrunnsfarge på grid */
-    border-radius: 8px;                  /* Runde hjørner */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skyggeeffekt */
-    border-style: dashed;                /* Prikkete kantlinje */
-    margin: 40px;                           /* Fjerner ytre marg */
-}
-
-.main-content, .sidebar {               /* Hovedinnhold og sidebar */
-    background-color: #f9baba;          /* Bakgrunnsfarge */
-    padding: 20px;                      /* Indre marg for teks*/
-    border-radius: 6px;                 /* Runde hjørner */
-    border-style: dotted;               /* Prikkete kantlinje */
-}
-  
-header, footer {
-    text-align: justify;                /* Justerer tekst */
-    padding: 5px;                       /* Indre marg */
-    background-color: #364529;          /* Bakgrunnsfarge */
-    color: white;                       /* Tekstfarge */
-}
-
-/* Styler navigasjonsmenyen */
-nav ul {
-    list-style: none;                   /* Fjerner punkter fra liste */
-    padding: 0;                         /* Fjerner padding */
-    display: flex;                      /* Flexbox for meny */
-    justify-content: center;            /* Sentrerer menyen */
-    gap: 20px;                          /* Avstand mellom elementer */
-}
-
-/* Styler lenkene i navigasjonsmenyen */
-nav a {
-    color: white;                       /* Hvit tekst på lenker */
-    text-decoration: none;              /* Fjerner understrek */
-}
-
+/* Ekstra grid container for .container (brukes hvis du har .container i HTML) */
 .container {
   display: grid;                        /* Aktiverer grid */
   column-gap: 50px;                     /* Avstand mellom kolonner */
