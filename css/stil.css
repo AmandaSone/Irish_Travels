@@ -62,8 +62,10 @@ nav a {
 body {
   font-family: sans-serif;              /* Skrifttype for hele siden */
   margin: 0;                            /* Fjerner standard marg */
-  background-color: #FCE6D4;            /* Bakgrunnsfarge */
+  background: linear-gradient(to bottom, #FCE6D4, #ECB88B); /* Gradient fra topp til bunn */
   font-size: 14px;                      /* Standard tekststørrelse */
+  text-align: center;                /* Sentrerer all tekst */
+  min-height: 100vh;                    /* Sikrer at gradienten dekker hele høyden */
 }
 
 /* ===========================
@@ -82,14 +84,13 @@ body {
 .grid-container {                       
   flex: 1;                              /* Lar grid-container vokse likt i wrapper */
   display: grid;                        /* Aktiverer CSS grid */
-  grid-template-columns: 1fr 1fr;       /* To kolonner med lik bredde */
+  grid-template-columns: 1fr;       /* En kolonne som tar opp all tilgjengelig plass */
   gap: 20px;                            /* Avstand mellom kolonner */
-  padding: 10px;                        /* Indre marg for tekst */
-  max-width: 700px;                     /* Maks bredde på hver grid-container */
-  background-color: #da8686;            /* Bakgrunnsfarge på grid */
+  padding: 15px;                        /* Indre marg for tekst */
+  max-width: 500px;                     /* Maks bredde på hver grid-container */
+  background-color: #976345;            /* Bakgrunnsfarge på grid */
   border-radius: 8px;                   /* Runde hjørner */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skyggeeffekt */
-  border-style: dashed;                 /* Prikkete kantlinje */
   margin: 40px;                         /* Ytre marg */
 }
 
@@ -98,10 +99,9 @@ body {
    =========================== */
 
 .main-content, .sidebar {               
-  background-color: #f9baba;            /* Bakgrunnsfarge */
-  padding: 20px;                        /* Indre marg for tekst */
+  background-color: #ce9473;            /* Bakgrunnsfarge */
+  /* padding:5px;                        /* Indre marg for tekst */
   border-radius: 6px;                   /* Runde hjørner */
-  border-style: dotted;                 /* Prikkete kantlinje */
 }
 
 /* ===========================
@@ -170,14 +170,14 @@ header, footer {
 
 /* Stil for hvert galleri-element */
 .gallery-item {                         /* Enkelt bilde/element i galleriet */
-  margin: 5px;                          /* Avstand rundt elementet */
-  border: 1px solid #ccc;               /* Lys grå kant */
-  width: 180px;                         /* Fast bredde på elementet */
+  margin: 0px;                          /* Avstand rundt elementet */
+  width: fit-content;                         /* Fast bredde på elementet */
   transition: border 0.2s;              /* Myk overgang på kant ved hover */
+  transition: color 0.2s; 
 }
 
 .gallery-item:hover {                   /* Hover-effekt på galleri-element */
-  border: 1px solid #777;               /* Mørkere kant ved hover */
+  color: #ffffff;                    /* Endrer tekstfarge ved hover */
 }
 
 /* Stil for bilde i galleri-element */
