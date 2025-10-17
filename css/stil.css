@@ -64,7 +64,7 @@ body {
   margin: 0;                            /* Fjerner standard marg */
   background: linear-gradient(to bottom, #FCE6D4, #ECB88B); /* Gradient fra topp til bunn */
   font-size: 14px;                      /* Standard tekststørrelse */
-  text-align: center;                /* Sentrerer all tekst */
+  text-align: center;                /* justerer all tekst til midten */
   min-height: 100vh;                    /* Sikrer at gradienten dekker hele høyden */
 }
 
@@ -87,8 +87,9 @@ body {
   grid-template-columns: 1fr;       /* En kolonne som tar opp all tilgjengelig plass */
   gap: 20px;                            /* Avstand mellom kolonner */
   padding: 15px;                        /* Indre marg for tekst */
-  max-width: 500px;                     /* Maks bredde på hver grid-container */
+  max-width: 1200px;                     /* Maks bredde på hver grid-container */
   background-color: #976345;            /* Bakgrunnsfarge på grid */
+  text-align: left;                     /* Venstrejustert tekst */
   border-radius: 8px;                   /* Runde hjørner */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skyggeeffekt */
   margin: 40px;                         /* Ytre marg */
