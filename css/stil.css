@@ -9,7 +9,6 @@
   justify-content: space-between;       /* Plasserer elementer med plass mellom */
   padding: 1rem 2rem;                   /* Indre marg rundt header */
   background: #364529;                  /* Bakgrunnsfarge på header */
-  /* box-shadow: 0 2px 8px #812c2c; */  /* Skygge (kommentert ut) */
 }
 
 /* Tittel i headeren */
@@ -88,12 +87,13 @@ body {
   padding: 15px;                        /* Indre marg for tekst */
   max-width: 1000px;                     /* Maks bredde på hver grid-container */
   background-color: #976345;            /* Bakgrunnsfarge på grid */
-  text-align: left;                     /* Venstrejustert tekst */
+  text-align: center;                     /* Venstrejustert tekst */
   border-radius: 8px;                   /* Runde hjørner */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skyggeeffekt */
   margin: 40px;                         /* Ytre marg */
 }
 
+/* Mindre størelse grid-container for sidebar */
 .sidebar-grid-container {                
   flex: 1;                            /* Smalere sidebar */
   display: grid;                        /* Aktiverer CSS grid */
@@ -102,7 +102,7 @@ body {
   padding: 15px;                        /* Indre marg for tekst */
   max-width: 400px;                     /* Maks bredde på sidebar */
   background-color: #976345;            /* Bakgrunnsfarge på grid */
-  text-align: left;                     /* Venstrejustert tekst */
+  text-align: center;                     /* Venstrejustert tekst */
   border-radius: 8px;                   /* Runde hjørner */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skyggeeffekt */
   margin: 40px;                         /* Ytre marg */
@@ -115,7 +115,7 @@ body {
 .main-content, .sidebar {               
   background-color: #ce9473;            /* Bakgrunnsfarge */
   border-radius: 6px;                   /* Runde hjørner */
-  text-align:left;                /* Sentrerer teksten */
+  text-align: center;                /* Sentrerer teksten */
 }
 
 .intro-text {
@@ -176,17 +176,7 @@ header, footer {
 }
 
 /* ===========================
-   EKSTRA GRID STIL
-   =========================== */
-
-/* Ekstra grid container for .container (brukes hvis du har .container i HTML) */
-.container {
-  display: grid;                        /* Aktiverer grid */
-  column-gap: 50px;                     /* Avstand mellom kolonner */
-}
-
-/* ===========================
-   GALLERI STIL
+   GALLERI BUTTON STIL
    =========================== */
 
 
@@ -209,6 +199,29 @@ header, footer {
 
 /* Stil for beskrivelse under bilde */
 .gallery-item .desc {                   
+  padding: 15px;                        /* Indre marg rundt tekst */
+  text-align: center;                   /* Sentrerer teksten */
+}
+
+/* ===========================
+   IMAGE STIL
+   =========================== */
+
+/* Stil for hvert galleri-element */
+.image-item {                         /* Enkelt bilde/element i galleriet */
+  margin: 0px;                          /* Avstand rundt elementet */
+  width: fit-content;                         /* Fast bredde på elementet */
+  transition: color 0.2s; 
+}
+
+/* Stil for bilde i galleri-element */
+.image-item img {                     
+  width: 100%;                          /* Bildet fyller hele bredden */
+  height: auto;                         /* Beholder proporsjoner */
+}
+
+/* Stil for beskrivelse under bilde */
+.image-item .desc {                   
   padding: 15px;                        /* Indre marg rundt tekst */
   text-align: center;                   /* Sentrerer teksten */
 }
