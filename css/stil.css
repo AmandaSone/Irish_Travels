@@ -94,15 +94,28 @@ body {
   margin: 40px;                         /* Ytre marg */
 }
 
+.sidebar-grid-container {                
+  flex: 1;                            /* Smalere sidebar */
+  display: grid;                        /* Aktiverer CSS grid */
+  grid-template-columns: 1fr;      /* En kolonne som tar opp all tilgjengelig plass */
+  gap: 20px;                            /* Avstand mellom kolonner */
+  padding: 15px;                        /* Indre marg for tekst */
+  max-width: 400px;                     /* Maks bredde på sidebar */
+  background-color: #976345;            /* Bakgrunnsfarge på grid */
+  text-align: left;                     /* Venstrejustert tekst */
+  border-radius: 8px;                   /* Runde hjørner */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skyggeeffekt */
+  margin: 40px;                         /* Ytre marg */
+}
+
 /* ===========================
    INNHOLD OG SIDEBAR
    =========================== */
 
 .main-content, .sidebar {               
   background-color: #ce9473;            /* Bakgrunnsfarge */
-  padding:5px;                        /* Indre marg for tekst */         /* --- SKAL JEG HA ELLER IKKE??*/
   border-radius: 6px;                   /* Runde hjørner */
-  text-align: center;                  /* Sentrerer teksten */
+  text-align:left;                /* Sentrerer teksten */
 }
 
 .intro-text {
@@ -131,9 +144,6 @@ header, footer {
 
 /* For små og mellomstore skjermer */
 @media screen and (max-width: 900px) {      
-  .container {
-    width: 95%;                         /* Container bredde på små/mellomstore skjermer */
-  }
   h1 {
     font-size: 1.5em;                   /* Mindre tittel på små/mellomstore skjermer */
   }
@@ -144,13 +154,21 @@ header, footer {
   }
   .grid-container {
     max-width: 100%;                    /* Full bredde på små/mellomstore skjermer */
+    width: 95%;                         /* Container bredde på små/mellomstore skjermer */
+  }
+  .sidebar-grid-container {
+    max-width: 100%;                    /* Full bredde på sidebar på små/mellomstore skjermer */
+    width: 95%;                         /* Container bredde på sidebar på små/mellomstore skjermer */
   }
 }
 
 /* For store skjermer */
 @media screen and (min-width: 1200px) { 
-  .container {
-    width: 1100px;                      /* Container bredde på store skjermer */
+  .grid-container {
+    max-width: 1100px;                      /* Container bredde på store skjermer */
+  }
+  .sidebar-grid-container {
+    max-width: 400px;                      /* Container bredde på sidebar på store skjermer */
   }
   h1 {
     font-size: 3em;                     /* Større tittel på store skjermer */
