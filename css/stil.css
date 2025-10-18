@@ -14,7 +14,7 @@
 
 /* Tittel i headeren */
 .header-flex h1 {                       
-  margin: 0;                            /* Fjerner standard marg */
+  margin: 10px;                            /* Fjerner standard marg */
   font-size: 2em;                       /* Størrelse på tittel */
 }
 
@@ -75,9 +75,8 @@ body {
 /* Wrapper for grid-containere */
 .wrapper {                              
   display: flex;                        /* Plasserer grid-containere side ved side */
-  gap: 5px;                             /* Avstand mellom grid-containere */
   justify-content: center;              /* Sentrerer innholdet horisontalt */
-  margin: 20px;                         /* Topp og bunn marg */
+  margin: 20px auto;                         /* Topp og bunn marg */
 }
 
 /* Grid-container for innhold */
@@ -87,7 +86,7 @@ body {
   grid-template-columns: 1fr;       /* En kolonne som tar opp all tilgjengelig plass */
   gap: 20px;                            /* Avstand mellom kolonner */
   padding: 15px;                        /* Indre marg for tekst */
-  max-width: 1200px;                     /* Maks bredde på hver grid-container */
+  max-width: 1000px;                     /* Maks bredde på hver grid-container */
   background-color: #976345;            /* Bakgrunnsfarge på grid */
   text-align: left;                     /* Venstrejustert tekst */
   border-radius: 8px;                   /* Runde hjørner */
@@ -101,8 +100,18 @@ body {
 
 .main-content, .sidebar {               
   background-color: #ce9473;            /* Bakgrunnsfarge */
-  /* padding:5px;                        /* Indre marg for tekst */
+  padding:5px;                        /* Indre marg for tekst */         /* --- SKAL JEG HA ELLER IKKE??*/
   border-radius: 6px;                   /* Runde hjørner */
+  text-align: center;                  /* Sentrerer teksten */
+}
+
+.intro-text {
+  background-color: #ce9473;            /* Bakgrunnsfarge */
+  padding:5px;                        /* Indre marg for tekst */  
+  border-radius: 6px;                   /* Runde hjørner */
+  text-align: center;                  /* Sentrerer teksten */
+  font-size: 1.2em;                     /* Større tekst for introduksjon */
+  color:#f7f3ef;                  /* Hvit tekstfarge */
 }
 
 /* ===========================
@@ -111,7 +120,7 @@ body {
 
 header, footer {
   text-align: justify;                  /* Justerer tekst */
-  padding: 5px;                         /* Indre marg */
+  padding: 10px;                         /* Indre marg */
   background-color: #364529;            /* Bakgrunnsfarge */
   color: white;                         /* Tekstfarge */
 }
@@ -162,18 +171,11 @@ header, footer {
    GALLERI STIL
    =========================== */
 
-/* Flexbox for galleriet */
-.gallery {                               /* Container for galleri */
-  display: flex;                        /* Bruker flexbox for layout */
-  flex-wrap: wrap;                      /* Bryter til ny linje ved behov */
-  justify-content: flex-start;          /* Starter innholdet til venstre */
-}
 
 /* Stil for hvert galleri-element */
 .gallery-item {                         /* Enkelt bilde/element i galleriet */
   margin: 0px;                          /* Avstand rundt elementet */
   width: fit-content;                         /* Fast bredde på elementet */
-  transition: border 0.2s;              /* Myk overgang på kant ved hover */
   transition: color 0.2s; 
 }
 
