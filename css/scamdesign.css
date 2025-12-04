@@ -1,116 +1,132 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ===========================
+   HEADER OG NAVIGASJON
+   =========================== */
+
+
+.header-flex {                           /* Flex container for header */
+  display: flex;                        /* Aktiverer flexbox */
+  align-items: center;                  /* Vertikal sentrering av innhold */
+  justify-content: space-between;       /* Plasserer elementer med plass mellom */
+  padding: 1rem 2rem;                   /* Indre marg rundt header */
+  background: #9db2c5;                  /* Bakgrunnsfarge på header */
 }
+
+/* Tittel i headeren */
+.header-flex h1 {                       
+  margin: 10px;                            /* Fjerner standard marg */
+  font-size: 2em;                       /* Størrelse på tittel */
+}
+
+/* Navigasjonsmeny-knapper */
+.header-buttons {                       
+  display: flex;                        /* Flexbox for knapper */
+  gap: 1rem;                            /* Avstand mellom knapper */
+  list-style: none;                     /* Fjerner punktmerking */
+  margin: 0;                            /* Fjerner marg */
+  padding: 0;                           /* Fjerner padding */
+}
+
+/* Stil for knapp-lenker */
+.button-link {                          
+  background: #4b6374;                  /* Bakgrunnsfarge på knapp */
+  color: #ffffff;                       /* Tekstfarge */
+  padding: 0.8em 1.5em;                 /* Indre marg på knapp */
+  border-radius: 4px;                   /* Runde hjørner */
+  text-decoration: none;                /* Fjerner understrek */
+  transition: background 0.2s;          /* Animasjon ved hover */
+}
+.button-link:hover {                    
+  background: #1d2b38;                  /* Lysere bakgrunn ved hover */
+}
+
+/* Navigasjonsmeny layout */
+nav ul {                                
+  list-style: none;                     /* Fjerner punkter fra liste */
+  padding: 0;                           /* Fjerner padding */
+  display: flex;                        /* Flexbox for meny */
+  justify-content: center;              /* Sentrerer menyen */
+  gap: 20px;                            /* Avstand mellom elementer */
+}
+
+/* Navigasjonslenker */
+nav a {                                
+  color: white;                         /* Hvit tekst på lenker */
+  text-decoration: none;                /* Fjerner understrek */
+}
+
+/* ===========================
+   BODY OG GRUNNLEGGENDE STIL
+   =========================== */
+
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  font-family: sans-serif;              /* Skrifttype for hele siden */
+  margin: 0;                            /* Fjerner standard marg */
+  background: linear-gradient(to bottom, #faf8f6, #e1d5cc); /* Gradient fra topp til bunn */
+  font-size: 14px;                      /* Standard tekststørrelse */
+  text-align: center;                /* justerer all tekst til midten */
+  min-height: 100vh;                    /* Sikrer at gradienten dekker hele høyden */
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
+/* ===========================
+   GRID OG WRAPPER
+   =========================== */
+
+
+/* Wrapper for grid-containere */
+.wrapper {                              
+  display: flex;                        /* Plasserer grid-containere side ved side */
+  justify-content: center;              /* Sentrerer innholdet horisontalt */
+  margin: 20px auto;                         /* Topp og bunn marg */
 }
 
-.header-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Grid-container for innhold */
+.grid-container {                       
+  flex: 1;                              /* Lar grid-container vokse likt i wrapper */
+  display: grid;                        /* Aktiverer CSS grid */
+  grid-template-columns: 1fr;       /* En kolonne som tar opp all tilgjengelig plass */
+  gap: 20px;                            /* Avstand mellom kolonner */
+  padding: 15px;                        /* Indre marg for tekst */
+  max-width: 1000px;                     /* Maks bredde på hver grid-container */
+  background-color: #976345;            /* Bakgrunnsfarge på grid */
+  text-align: center;                     /* Venstrejustert tekst */
+  border-radius: 8px;                   /* Runde hjørner */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skyggeeffekt */
+  margin: 40px;                         /* Ytre marg */
 }
 
-.header-buttons {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+/* Mindre størelse grid-container for sidebar */
+.sidebar-grid-container {                
+  flex: 1;                            /* Smalere sidebar */
+  display: grid;                        /* Aktiverer CSS grid */
+  grid-template-columns: 1fr;      /* En kolonne som tar opp all tilgjengelig plass */
+  gap: 20px;                            /* Avstand mellom kolonner */
+  padding: 15px;                        /* Indre marg for tekst */
+  max-width: 400px;                     /* Maks bredde på sidebar */
+  background-color: #976345;            /* Bakgrunnsfarge på grid */
+  text-align: center;                     /* Venstrejustert tekst */
+  border-radius: 8px;                   /* Runde hjørner */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skyggeeffekt */
+  margin: 40px;                         /* Ytre marg */
 }
 
-.button-link {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+/* ===========================
+   INNHOLD OG SIDEBAR
+   =========================== */
+
+
+.main-content, .sidebar {               
+  background-color: #ce9473;            /* Bakgrunnsfarge */
+  border-radius: 6px;                   /* Runde hjørner */
+  text-align: left;                /* Sentrerer teksten */
+  padding: 15px;                        /* Indre marg for tekst */
 }
 
-.button-link:hover {
-    background-color: #555;
-}
-
-.wrapper {
-    flex: 1;
-    max-width: 1200px;
-    margin: 30px auto;
-    width: 100%;
-    padding: 0 20px;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.product-card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-}
-
-.product-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.product-info {
-    padding: 15px;
-}
-
-.product-info h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.product-price {
-    font-size: 20px;
-    font-weight: bold;
-    color: #27ae60;
-    margin-bottom: 10px;
-}
-
-.add-to-cart {
-    width: 100%;
-    padding: 10px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.add-to-cart:hover {
-    background-color: #2980b9;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+.intro-text {
+  background-color: #ce9473;            /* Bakgrunnsfarge */
+  padding:5px;                        /* Indre marg for tekst */  
+  border-radius: 6px;                   /* Runde hjørner */
+  text-align: center;                  /* Sentrerer teksten */
+  font-size: 1.2em;                     /* Større tekst for introduksjon */
+  color:#f7f3ef;                  /* Hvit tekstfarge */
 }
