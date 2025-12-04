@@ -88,7 +88,7 @@ body {
   gap: 20px;                            /* Avstand mellom kolonner */
   padding: 15px;                        /* Indre marg for tekst */
   max-width: 1000px;                     /* Maks bredde på hver grid-container */
-  background-color: #976345;            /* Bakgrunnsfarge på grid */
+  background-color: #4b6374;            /* Bakgrunnsfarge på grid */
   text-align: center;                     /* Venstrejustert tekst */
   border-radius: 8px;                   /* Runde hjørner */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skyggeeffekt */
@@ -103,7 +103,7 @@ body {
   gap: 20px;                            /* Avstand mellom kolonner */
   padding: 15px;                        /* Indre marg for tekst */
   max-width: 400px;                     /* Maks bredde på sidebar */
-  background-color: #976345;            /* Bakgrunnsfarge på grid */
+  background-color: #4b6374;            /* Bakgrunnsfarge på grid */
   text-align: center;                     /* Venstrejustert tekst */
   border-radius: 8px;                   /* Runde hjørner */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skyggeeffekt */
@@ -116,17 +116,47 @@ body {
 
 
 .main-content, .sidebar {               
-  background-color: #ce9473;            /* Bakgrunnsfarge */
+  background-color: #9db2c5;            /* Bakgrunnsfarge */
   border-radius: 6px;                   /* Runde hjørner */
   text-align: left;                /* Sentrerer teksten */
   padding: 15px;                        /* Indre marg for tekst */
 }
 
 .intro-text {
-  background-color: #ce9473;            /* Bakgrunnsfarge */
+  background-color: #9db2c5;            /* Bakgrunnsfarge */
   padding:5px;                        /* Indre marg for tekst */  
   border-radius: 6px;                   /* Runde hjørner */
   text-align: center;                  /* Sentrerer teksten */
   font-size: 1.2em;                     /* Større tekst for introduksjon */
   color:#f7f3ef;                  /* Hvit tekstfarge */
+}
+
+/* ===========================
+   ANIMASJONER
+   =========================== */
+
+#boks {
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    position: relative;
+    animation-name: frem-og-tilbake;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes frem-og-tilbake {
+    0% {
+        left: 0px;
+    }
+    50% {
+        background-color: rgb(162, 32, 179);
+        
+    }
+    100% {
+        left: 1500px;
+        background-color: red;
+        
+    }
 }
