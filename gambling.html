@@ -23,22 +23,27 @@
         </div>
     </header>  							<!-- Header section with title and navigation menu -->
 
+    <br>
+
     <div id="typeChoice">
         <label>color or number</label><br>
         <button id="color">color</button>
         <button id="number">number</button>
     </div>
     <div id="colorChoice" style="display: none;">
-        <label>which color</label><br>
+        <label>Which color?</label><br>
         <button id="redChoice">red</button>
-        <button id="blackChoice">black</button>
+        <button id="blackChoice">black</button><br><br>
+        <label>How much money ya betting?</label><br>
+        <input type="number" id="colorBetAmount" min="1" value="1"><br><br>
+        <button id="playCol">Play</button>
     </div>
 
-    
-    <!-- <div class="buttons-container">
-        <button id="rouletteButton">Play Roulette</button>
-        <button id="slotsButton">Play Slots</button>
-    </div> -->
+    <div id="colorResult" style="display: none";>
+        <h2>Your Result:</h2>
+        <p id="resultText"></p>
+    </div>
 
         <script src="javascript/roulette.js"></script>
+</body>
 </html>
